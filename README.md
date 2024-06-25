@@ -41,4 +41,8 @@
 
       Note: **"singleTask"** and **"singleInstancePerTask"** remove all activities that are above the starting activity from the task.
 
-5. #### 
+5. #### What is Affinity
+
+   An affinity indicates which task an activity "prefers" to belong to. By default, all the activities from the same app have an affinity for each other.
+   
+7. 
