@@ -31,7 +31,7 @@
 
    ``` Activity A - onRestart() > onStart() > onResume() ```
 
-5. #### What will be the activity lifecycle when the user launches a new activity from the existing activity?
+4. #### What will be the activity lifecycle when the user launches a new activity from the existing activity?
 
    Below are the lifecycle callbacks when we launch Activity A, and after that, from Activity A, we launch Activity B.
 
@@ -49,8 +49,8 @@
    
    ``` Activity B - onStop() > onDestroy() ```
 
-6. #### What is onSavedInstanceState and onRestoreInstanceState in activity?
-   onSaveInstanceState() and onRestoreInstanceState() are two important methods in the activity lifecycle that help in preserving the activity's state during configuration changes like    screen rotations or when the system kills the activity to reclaim memory.
+5. #### What is onSavedInstanceState and onRestoreInstanceState in activity?
+   onSaveInstanceState() and onRestoreInstanceState() are two important methods in the activity lifecycle that help in preserving the activity's state during configuration changes        like screen rotations or when the system kills the activity to reclaim memory.
    #### onSavedInstanceState() 
    - Called before the activity is paused or stopped.
    - Used to save the data to a Bundle object.
@@ -58,7 +58,7 @@
    - Called after onStart() and before onResume() when the activity is being re-initialized from a previously saved state.
    - Used to restore the data from the Bundle object.
 
-7. #### Explain launch modes
+6. #### Explain launch modes
    there are 5 types of launch modes
    
    **standard** - The system always creates a new instance of the activity in the task. this is the default launch mode.
@@ -83,11 +83,20 @@
 
    Note: **"singleTask"** and **"singleInstancePerTask"** remove all activities that are above the starting activity from the task.
 
-9. #### When the user press on the “Back” button will onDestroy() be called?
+7. #### When the user press on the “Back” button will onDestroy() be called?
     when the user presses the “Back” button inside of activity it will call finish() which will close activity.
    
-11. #### When only onDestroy() is called for an activity without onPause() and onStop()?
+8. #### When only onDestroy() is called for an activity without onPause() and onStop()?
     if we call finish() from activity onCreate() method, in this case onPause() and onStop() will never called.
    
-12. #### What is Affinity?
-    An affinity indicates which task an activity "prefers" to belong to. By default, all the activities from the same app have an affinity for each other. 
+9. #### What is Affinity?
+    An affinity indicates which task an activity "prefers" to belong to. By default, all the activities from the same app have an affinity for each other.
+    
+10. #### When you show dialog on a activity which lifecycle method will be called?
+    when an AlertDialog or DialogFragment is used, it will never call OnPause(), since they are a part of the activity.
+    
+11. #### When you get a call on your phone which life cycle method will be called?
+    Your app goes into the background when the user receives a phone call. The activity goes through the onPause() and onStop() methods.
+    
+12. #### Which method is called when Android system kills the activity due to memory issue?
+    When Android decides to kill our app, our activities will call onDestroy() method. But before that, one more method will be also called and that is onSaveInstanceState(Bundle). 
