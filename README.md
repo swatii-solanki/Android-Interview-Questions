@@ -76,6 +76,7 @@
    ``` [C = singleTask] A-B-C-D >> A-B-C ```
    
    **singleInstance** - It's similar to singleTask expect it will be create the new instance of the activity in separate task & the system doesn't launch any other activity in that        task.
+   
    ``` [D = singleInstance]  A-B-C-D >> Task 1 [A-B-C]  >> Task 2 [D] ```
    
    **singleInstancePerTask** - This mode is similar to singleInstance mode, but the only difference is that muliple instances of the activity can be created in different tasks.
