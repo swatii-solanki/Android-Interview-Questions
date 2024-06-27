@@ -105,3 +105,6 @@
    - Serializable uses reflection to serialize and deserialize the object, which can be slow and inefficient, while Parcelable generates code to do the same thing, resulting in faster      and more efficient serialization and deserialization.
    - Parcelable requires more boilerplate code to implement, as it requires writing custom code to serialize and deserialize each field in the object, while Serializable can be             implemented with just a marker interface.
    - Serializable can be used with any Java class, while Parcelable can only be used with classes that implement the Parcelable interface.
+
+14. #### What is Reflection?
+    Reflection is the ability of a program to inspect its own structure and behavior at runtime. It allows us to examine and modify objects and classes, as well as create new ones.
