@@ -100,3 +100,8 @@
     
 12. #### Which method is called when Android system kills the activity due to memory issue?
     When Android decides to kill our app, our activities will call onDestroy() method. But before that, one more method will be also called and that is onSaveInstanceState(Bundle). 
+
+13. #### What is the difference between Serializable and Parcelable?
+   - Serializable uses reflection to serialize and deserialize the object, which can be slow and inefficient, while Parcelable generates code to do the same thing, resulting in faster      and more efficient serialization and deserialization.
+   - Parcelable requires more boilerplate code to implement, as it requires writing custom code to serialize and deserialize each field in the object, while Serializable can be             implemented with just a marker interface.
+   - Serializable can be used with any Java class, while Parcelable can only be used with classes that implement the Parcelable interface.
