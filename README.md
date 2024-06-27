@@ -108,3 +108,18 @@
 
 14. #### What is Reflection?
     Reflection is the ability of a program to inspect its own structure and behavior at runtime. It allows us to examine and modify objects and classes, as well as create new ones.
+
+15. #### What is Intent?
+    Intent is an object that allows one application component to interact with another component. In other words, an Intent is used to start an operation or send a data to another component.
+
+    **Types of Intent**
+    - **Explicit Intent** - In explicit intent we specify target application name or fully qualified component class name. Mosely we use explicit intent for starting service, activity, services, receivers etc. 
+    - **Implicit Intent** - In implicit intent we do not specify the target component name. We just declare action that can invoke any app on the device to perform the action. For Ex. if we want to send email then we request other capable app via implicit intent to handle this intent.
+
+16. #### What is Intent Filter?
+    Intent filters are expressions which we declare in app manifest file to let other application directly communicate with component. Intent filter can only be used with implicit intent.
+
+
+
+
+
