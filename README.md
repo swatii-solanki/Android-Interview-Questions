@@ -1,4 +1,4 @@
-# Android-Interview-Questions
+# Android-Activity-Interview-Questions
 1. #### What is Activity ?
    An Activity is the part of the android components & it's the starting point of the application. An activity provides the window in which the app draws its UI.
    
