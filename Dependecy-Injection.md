@@ -33,7 +33,7 @@
    creating instances within modules, @Binds eliminates the need for instantiating the implementation class explicitly. Instead, it establishes a direct binding between the interface
    and the implementation, reducing boilerplate code and simplifying the overall configuration.
 
-8. #### What is @HiltViewModel:
+8. #### What is @HiltViewModel?
    It helps in integrating ViewModel classes with dependency injection. It automatically injects dependencies into ViewModel classes, reducing boilerplate code and making it easier to
    manage dependencies.
 
@@ -54,7 +54,7 @@
     For example, if we have two classes, A and B, that depend on each other, we can create a custom scope called “CircularScope” and annotate both classes with this scope. This will
     tell Dagger to create a separate object graph for these two classes, which will break the circular dependency.
 
-    We can also use a Subcomponent to break the circular dependency. A Subcomponent is a component that is created within another component. This allows us to create a separate objec
+    We can also use a Subcomponent to break the circular dependency. A Subcomponent is a component that is created within another component. This allows us to create a separate object
     graph for the objects that are part of the circular dependency.
 
     Finally, we can use a Provider to break the circular dependency. A Provider is a class that provides an instance of an object. This allows us to create a separate object graph for
