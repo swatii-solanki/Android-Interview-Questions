@@ -37,3 +37,30 @@
    It helps in integrating ViewModel classes with dependency injection. It automatically injects dependencies into ViewModel classes, reducing boilerplate code and making it easier to
    manage dependencies.
 
+9. #### Provides vs binds
+   - The @Inject annotation is used to indicate that a particular constructor, field, or method should be used for dependency injection. It is used to indicate that a particular class
+   should be used as a dependency for another class. The @Inject annotation can be used on constructors, fields, and methods.
+
+   - The @Provides annotation is used to indicate that a particular method should be used to provide a dependency. It is used to indicate that a particular method should be used t
+   provide a dependency for another class. The @Provides annotation can only be used on methods.
+
+   - The main difference between the two annotations is that the @Inject annotation is used to indicate that a particular class should be used as a dependency, while the @Provide
+   annotation is used to indicate that a particular method should be used to provide a dependency.
+
+10. #### How do you handle circular dependencies when using Dagger?
+    When using Dagger, circular dependencies can be handled by using a custom scope. A custom scope is a way to limit the object graph that Dagger creates. This allows us to break the
+    circular dependency by creating a scope that is only used for the objects that are part of the circular dependency.
+
+    For example, if we have two classes, A and B, that depend on each other, we can create a custom scope called “CircularScope” and annotate both classes with this scope. This will
+    tell Dagger to create a separate object graph for these two classes, which will break the circular dependency.
+
+    We can also use a Subcomponent to break the circular dependency. A Subcomponent is a component that is created within another component. This allows us to create a separate objec
+    graph for the objects that are part of the circular dependency.
+
+    Finally, we can use a Provider to break the circular dependency. A Provider is a class that provides an instance of an object. This allows us to create a separate object graph for
+    the objects that are part of the circular dependency.
+
+    By using one of these methods, we can break the circular dependency and allow Dagger to create the object graph correctly.
+
+
+
