@@ -69,5 +69,11 @@
     For example, Hilt doesn't directly support content providers. If you want a content provider to use Hilt to get some dependencies, you need to define an interface that is annotated
     with @EntryPoint for each binding type that you want and include qualifiers. Then add @InstallIn to specify the component in which to install the entry point as follows:
 
+12. #### What is Lazy Injection?
+    Lazy<T> is a Dagger2 construct that allows deferred creation of a dependency.
+
+13. #### Why use Lazy Injection?
+    - Deferred Initialization: If a dependency is heavy and you don’t need it immediately after the component is created, you can delay its instantiation.
+    - Single Instantiation: The dependency is created only once, the first time it’s requested. Subsequent requests will return the same instance.
 
 
