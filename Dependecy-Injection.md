@@ -62,5 +62,12 @@
 
     By using one of these methods, we can break the circular dependency and allow Dagger to create the object graph correctly.
 
+11. #### What is an entry point?
+    An entry point is the boundary between code that is managed by Hilt and code that is not. It is the point where code first enters into the graph of objects that Hilt manages. Entry
+    points allow Hilt to use code that Hilt does not manage to provide dependencies within the dependency graph.
+
+    For example, Hilt doesn't directly support content providers. If you want a content provider to use Hilt to get some dependencies, you need to define an interface that is annotated
+    with @EntryPoint for each binding type that you want and include qualifiers. Then add @InstallIn to specify the component in which to install the entry point as follows:
+
 
 
