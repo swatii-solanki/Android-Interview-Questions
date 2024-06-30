@@ -102,6 +102,18 @@
 28. #### When you show dialog on a fragment/activity which lifecycle method will be called?
     No lifecycle method is called.
 
+29. #### What is the benefit of using a FragmentPagerAdapter over a FragmentStatePagerAdapter?
+    FragmentPagerAdapter is beneficial over FragmentStatePagerAdapter when dealing with a limited number of fragments, as it retains all active fragments in memory. This results in
+    faster navigation and reduced overhead for fragment creation and destruction. However, for larger sets of fragments, FragmentStatePagerAdapter is more efficient due to its on
+    demand loading and unloading of fragments.
+
+30. #### What is the purpose of having a default constructor for a Fragment and why is it important?
+    A default constructor for a Fragment is crucial as it ensures proper instantiation by the Android system during configuration changes or process restoration. Without a default
+    constructor, the system may fail to recreate the Fragment, leading to potential crashes and loss of user data.
+    When the Android system needs to restore a Fragment, it calls the default constructor to create a new instance. Then, it restores the saved state using methods like onCreate() and
+    onCreateView(). If there’s no default constructor, this process fails, causing issues in the app’s functionality.
+
+
 
 
 
