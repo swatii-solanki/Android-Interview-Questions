@@ -113,7 +113,7 @@
     Intent is an object that allows one application component to interact with another component. In other words, an Intent is used to start an operation or send a data to another component.
 
     **Types of Intent**
-    - **Explicit Intent** - In explicit intent we specify target application name or fully qualified component class name. Mosely we use explicit intent for starting service, activity, services, receivers etc. 
+    - **Explicit Intent** - In explicit intent we specify target application name or fully qualified component class name. we use explicit intent for starting service, activity, services, receivers etc. 
     - **Implicit Intent** - In implicit intent we do not specify the target component name. We just declare action that can invoke any app on the device to perform the action. For Ex. if we want to send email then we request other capable app via implicit intent to handle this intent.
 
 16. #### What is Intent Filter?
